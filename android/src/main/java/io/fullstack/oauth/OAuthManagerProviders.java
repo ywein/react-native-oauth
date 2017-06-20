@@ -264,13 +264,13 @@ public class OAuthManagerProviders {
     String scopes = "";
     if (cfg.containsKey("scopes")) {
       scopes = (String) cfg.get("scopes");
-      String scopeStr = OAuthManagerProviders.getScopeString(scopes, ",");
+      String scopeStr = OAuthManagerProviders.getScopeString(scopes, " ");
       builder.scope(scopeStr);
     }
 
     if (opts != null && opts.hasKey("scopes")) {
       scopes = (String) opts.getString("scopes");
-      String scopeStr = OAuthManagerProviders.getScopeString(scopes, ",");
+      String scopeStr = OAuthManagerProviders.getScopeString(scopes, " ");
       builder.scope(scopeStr);
     }
 
